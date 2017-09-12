@@ -1,7 +1,7 @@
 <template>
   <div class="person" v-bind:class="{ inactive: !partner.isActive }">
     <img :alt="partner.name" :src="partner.img">
-    <span><strong>{{ partner.name }}</strong>, {{ partner.age }}</span>
+    <span><strong>{{ partner.name }}</strong> {{ partner.age }} {{ partner.residence}} </br> {{ partner.tweet }}</span>
   </div>
 </template>
 
@@ -21,7 +21,8 @@ export default {
     overflow: hidden;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.2);
-    transition: all .1s linear;
+    // transition: all .1s linear;
+    opacity: 1;
     &:nth-child(1){
       z-index: 5;
       //animation: no 0.6s infinite;
@@ -48,6 +49,15 @@ export default {
       height: 100%;
       display: block;
       content: '';
+    }
+    &.inactive {
+      transform: translateY(-300px);
+      transition: opacity 800ms 500ms ease-out;
+      opacity: 0;
+      transform: translateY(-200px);
+      transition: 0.8s;
+      transition-delay: 0.5s;
+      opacity: 0;
     }
   }
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="control">
+  <div id="control" v-if="isShow">
     <div class="button no" v-on:click="nope">
       <a href="#" class="trigger"></a>
     </div>
@@ -28,7 +28,8 @@ export default {
     nope: function () {
       eventHub.$emit('nope')
     }
-  }
+  },
+  props: ['isShow']
 }
 </script>
 
