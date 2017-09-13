@@ -39,7 +39,7 @@ export default {
   position: relative;
   margin: 15px auto 0;
   width: 50%;
-  top: 700px;
+  top: 400px;
   .button {
     width: 65px;
     height: 65px;
@@ -76,7 +76,7 @@ export default {
   } 
   
   .no {
-    left: 38px;
+    left: 18px;
     .trigger:before {
       content: "\f00d";
       font-size: 28px;
@@ -85,7 +85,7 @@ export default {
   }
   
   .yes {
-    right: 38px;
+    right: 18px;
     .trigger:before {
       content: "\f004";
       font-size: 22px;

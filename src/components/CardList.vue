@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div 
-      id="people"
-      v-if="hasActivePartners()"
-    >
+    <div class="cards">
       <card
         v-for="partner in partners"
         v-bind:partner="partner"
@@ -18,7 +15,7 @@
 
     <matchingoverlay v-if="isShowMatchingOverlay"></matchingoverlay>
     
-    <h1
+    <h1 class="empty-message"
       v-if="!hasActivePartners()"
     >
       カードがありません
@@ -155,21 +152,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  #people {
+  .cards {
     position: relative;
     margin: 0 auto;
     width: 80%;
   }
+
   .card_over_ray {
     position: fixed;
     z-index: 10;
     top: 0;
     right: 0;
     left: 0;
-
     height: 100%;
     margin: 0 auto;
     padding: 100px 0 0;
     background-color: rgba(244, 141, 151, .9);
+  }
+  
+  .empty-message {
+    padding-top: 100px;
+    color: #788086;
   }
 </style>

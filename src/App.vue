@@ -11,8 +11,10 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: 'SF Pro JP','SF Pro Display','SF Pro Icons','Hiragino Kaku Gothic Pro','Meiryo','Helvetica Neue','Helvetica','Arial',sans-serif;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

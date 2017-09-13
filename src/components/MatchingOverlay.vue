@@ -3,18 +3,13 @@
       class="card_over_ray"
     >
       <div class="card_over_ray_title">
-          <div class="fnt24 fnt_white01 mb15">マッチング成立しました！</div>
-          <div class="fnt14 fnt_white01">おめでとうございます</div>
-      </div>
-      <div class="card_over_ray_button">
-        <div class="pairs_button_text">
-            メッセージを送る
-        </div>
+          <div class="matching-message"><h2>マッチング成立しました！</h2></div>
+          <div class="matching-message">おめでとうございます</div>
       </div>
       <div 
-        class="pairs_button_text" 
+        class="next-button" 
         v-on:click="continueSwiping">
-          続ける
+          <span>続ける</span>
       </div>
     </div>
 </template>
@@ -38,4 +33,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+  .matching-message {
+    color: #fff;
+  }
+
+  .next-button {
+    color: #fff;
+    border: 1px solid #fff;
+    width: 235px;
+    margin: 100px auto;
+    border-radius: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
 </style>

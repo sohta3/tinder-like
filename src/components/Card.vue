@@ -1,5 +1,5 @@
 <template>
-  <div class="person" v-bind:class="{ inactive: !partner.isActive }">
+  <div class="card" v-bind:class="{ inactive: !partner.isActive }">
     <img :alt="partner.name" :src="partner.img">
     <span><strong>{{ partner.name }}</strong> {{ partner.age }} {{ partner.residence}} </br> {{ partner.tweet }}</span>
   </div>
@@ -14,7 +14,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  .person {
+  .card {
     position: absolute;
     background-color: transparent;
     border-radius: 5px;
@@ -61,24 +61,24 @@ export default {
     }
   }
 
-  .person img {
+  .card img {
     width: 105%;
     background: white;
   }
 
-  .person span {
+  .card span {
     position: absolute;
     bottom: 0;
     left: 0;
     background: white;
     width: 100%;
     padding: 10px;
-    font: 16px "Open Sans";
+    font: 16px;
     line-height: 30px;
     color: #555;
   }
 
-  .person span strong {
+  .card span strong {
     font-weight: 600;
     color: #000;
   }
