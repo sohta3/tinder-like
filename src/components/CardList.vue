@@ -9,13 +9,12 @@
       </card>
     </div>
 
-    <buttoncontainer 
-      v-bind:isShow="hasActivePartners()"
-    ></buttoncontainer>
+    <buttoncontainer v-bind:isShow="hasActivePartners()"></buttoncontainer>
 
     <matchingoverlay v-if="isShowMatchingOverlay"></matchingoverlay>
     
-    <h1 class="empty-message"
+    <h1 
+      class="empty-message"
       v-if="!hasActivePartners()"
     >
       カードがありません
@@ -44,9 +43,7 @@ export default {
     const goToNextPartner = this.goToNextPartner
 
     eventHub.$on('like', showOverlay)
-
     eventHub.$on('nope', goToNextPartner)
-
     eventHub.$on('continue-swiping', goToNextPartner)
   },
   methods: {
@@ -169,7 +166,7 @@ export default {
     padding: 100px 0 0;
     background-color: rgba(244, 141, 151, .9);
   }
-  
+
   .empty-message {
     padding-top: 100px;
     color: #788086;

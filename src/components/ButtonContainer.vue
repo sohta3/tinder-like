@@ -1,14 +1,8 @@
 <template>
-  <div id="control" v-if="isShow">
+  <div class="control" v-if="isShow">
     <div class="button no" v-on:click="nope">
       <a href="#" class="trigger"></a>
     </div>
-
-    <!--
-    <div class="button info">
-      <a href="#" class="trigger"></a>
-    </div>
-    -->
 
     <div class="button yes" v-on:click="like">
       <a href="#" class="trigger"></a>
@@ -35,7 +29,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-#control {
+.control {
   position: relative;
   margin: 15px auto 0;
   width: 50%;

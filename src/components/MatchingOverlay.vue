@@ -1,14 +1,13 @@
 <template>
-    <div 
-      class="card_over_ray"
-    >
-      <div class="card_over_ray_title">
+    <div class="card_over_ray">
+      <div>
           <div class="matching-message"><h2>マッチング成立しました！</h2></div>
           <div class="matching-message">おめでとうございます</div>
       </div>
       <div 
         class="next-button" 
-        v-on:click="continueSwiping">
+        v-on:click="continueSwiping"
+      >
           <span>続ける</span>
       </div>
     </div>

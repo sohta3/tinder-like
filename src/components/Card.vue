@@ -21,25 +21,20 @@ export default {
     overflow: hidden;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.2);
-    // transition: all .1s linear;
     opacity: 1;
     &:nth-child(1){
       z-index: 5;
-      //animation: no 0.6s infinite;
     }
     &:nth-child(2){
       z-index: 4;
       top: 7px;
-      //transform: scale(0.98);
     }
     &:nth-child(3){
       z-index: 3;
       top: 14px;
-      //transform: scale(0.96);
     }
     &:nth-child(n+4){
       z-index: 2;
-      //transform: scale(0.7);
     }
     &:before {
       position: absolute;
